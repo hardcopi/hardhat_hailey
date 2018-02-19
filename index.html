@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>5484 Presents Hardhat Hailey's World</title>
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+	<script src="js/jquery-3.2.1.min.js"></script>
+
+	<script src="js/phaser.min.js"></script>
+	<script src="js/gamepad.js"></script>    
+	<style>
+		body {
+			margin: auto;
+			display: table;
+			position: absolute;
+			border:0px;
+			top: 0px;
+			left: 0px;
+			padding: 0; margin: 0;
+			background: #000
+		}
+	</style>
+	<script src="src/main.js"></script>
+</head>
+<body>
+</body>
+<script>
+	(function() {
+
+		game = new Phaser.Game( 960, 600, Phaser.CANVAS, 'game');
+		game.state.add('play', PlayState);
+		game.state.add('loading', LoadingState);
+		game.state.start('loading');
+
+	})();
+</script>
+
+</html>
